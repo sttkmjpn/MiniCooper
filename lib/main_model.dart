@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class Mainmodel extends ChangeNotifier{
+class Mainmodel extends ChangeNotifier {
   String conceptText = 'Mini Makes You Happy';
 
-  void changeconceptText(){
+  void changeconceptText() {
     conceptText = 'How do you feel?';
     notifyListeners();
   }
