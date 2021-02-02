@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:trial_flutter_app/book_list_page.dart';
-import 'package:trial_flutter_app/main_model.dart';
+import 'package:trial_flutter_app/main/main_model.dart';
+import 'package:trial_flutter_app/signup/signup_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Demo",
-      home: ChangeNotifierProvider<Mainmodel>(
-        create: (_) => Mainmodel(),
+      home: ChangeNotifierProvider<MainModel>(
+        create: (_) => MainModel(),
         child: Scaffold(
           appBar: AppBar(
             title: Text('New BMW Mini Cooper'),
           ),
-          body: Consumer<Mainmodel>(builder: (context, model, child) {
+          body: Consumer<MainModel>(builder: (context, model, child) {
             return Center(
               child: Column(
                 children: [
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BookListPage()),
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
                       );
                     },
                   )

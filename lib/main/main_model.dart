@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Mainmodel extends ChangeNotifier {
+class MainModel extends ChangeNotifier {
   String conceptText = 'Mini Makes You Happy';
 
   void changeconceptText() {
